@@ -1,5 +1,6 @@
 ---
 title: "職務経歴書"
+layout: default
 ---
 
 ## 個人データ
