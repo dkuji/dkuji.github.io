@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 timezone: Asia/Tokyo
+auto: true
+server: true
