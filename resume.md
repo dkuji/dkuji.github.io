@@ -118,7 +118,22 @@ SATT AIラボ株式会社(旧株式会社マナボ) (2017/09〜)
 - GCPプロジェクトを環境毎に分離。
 
 ### 新規プロジェクトの基盤開発
-新規プロジェクトのインフラ基盤としてGKEを採用し、`minikube`, `Helm`を使用して開発環境、staging環境を構築。
+新規プロジェクトのインフラ設計、構築を担当。
+Railsをコンテナ化しKubernetes、Helmを使用してインフラを構築。以下のアーキテクチャを採用し開発環境、staging環境を構築。
+
+- アプリケーション基盤
+Kubernetes(GKE),Helm
+アプリケーションをHelmコマンド一発でデプロイできるようHelmチャートを構築
+Publicに公開されているHelmチャートはTerraformのHelm Providerで管理
+- DB
+CloudSQL(PostgreSQL)
+- NoSQL
+MemoryStore(Redis)
+- 監視
+Prometheus
+- CI/CD
+CircleCI
+GitHubにプッシュするとRailsのテスト、Helmデプロイする環境を構築
 
 ### このプロジェクトで学んだこと
 - GCPについて、基本的な使い方や他のパブリッククラウドとの違いや何が得意なのかといったことを学ぶことが出来ました。
